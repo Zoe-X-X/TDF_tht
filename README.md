@@ -2,5 +2,6 @@
 This project build an one hour scheduling lambada for ingesting data from https://openweathermap.org to AWS s3.
 
 ## Description
-### Structure Diagram 
+### infrastructure
+![This is an image](/assets/images/electrocat.png)
 
