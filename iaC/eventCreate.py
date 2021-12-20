@@ -13,7 +13,7 @@ if __name__ == '__main__':
     event_client.put_targets(Rule='weatherApiSchedule',
                                     Targets=[{'Arn': lambda_arn,
                                                 'Id': '1'}])
-    lambda_client.add_permision(
+    lambda_client.add_permission(
         FunctionName=lambda_arn,
         StatementId='addPermisionForEventBridge',
         Action='lambda:InvokeFunction',
