@@ -9,9 +9,6 @@ from datetime import datetime
 s3 = boto3.client('s3')
 
 def run(event=None, context=None):
-    # check if there is a public bucket for this project
-    s3BucketCreate('public-read','tdf-tht','ap-southeast-2')
-
     # check if the destination file exist or not
     s3ObjCheck('tdf-tht','Staging/weatherDataHourly.csv')
 
@@ -29,18 +26,6 @@ def run(event=None, context=None):
                 'sunset':datetime.fromtimestamp(response['sys']['sunset'])}
     insertNewRow('tdf-tht','Staging/weatherDataHourly.csv',new_row)
 
-
-# create bucket
-def s3BucketCreate(acl_type,bucket_name,location):
-    if bucket_name not in [n['Name'] for n in s3.list_buckets()['Buckets']]:
-        s3.create_bucket(
-            ACL=acl_type,
-            Bucket=bucket_name,
-            CreateBucketConfiguration={'LocationConstraint': location}
-        )
-        print(f'The new bucket {bucket_name} has been created.')
-    else :
-        print(f'The bucket {bucket_name} exists.')
 
 # create CSV in bucket
 def s3ObjCheck(bucket_name,key_name):
