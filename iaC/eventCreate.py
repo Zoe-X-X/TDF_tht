@@ -3,6 +3,7 @@ if __name__ == '__main__':
     # connect to event bridge and lambda clients
     event_client = boto3.client('events')
     lambda_client = boto3.client('lambda')
+
     # get lambda arn
     lambda_arn = lambda_client.get_function(FunctionName='getWeatherData')['Configuration']['FunctionArn']
 
