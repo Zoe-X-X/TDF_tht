@@ -3,5 +3,9 @@ This project build an one hour scheduling lambada for ingesting data from https:
 
 ## Description
 ### infrastructure
-![This is an image](/assets/images/electrocat.png)
+<img src="https://github.com/Zoe-X-X/TDF_tht/blob/main/Infrastructure.png" width="400" >
 
+## Installation
+1. Get a free API Key at [https://openweathermap.org/current](https://openweathermap.org/current)
+
+## Usage
