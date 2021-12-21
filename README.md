@@ -9,7 +9,7 @@ There are 3 mian parts:
 * `tdfThtDeploymentPackage.zip` contains the `request` package to interact with the API and the core function runs by **AWS Lambda**, which implements obtaining the weather data from the API and then update the data file stored in **AWS S3**.
 * `Pandas_layer.zip` is used to install `Pandas`packages to enable **AWS Lambda** to run python script files.
 
-The data file can be check through the public **AWS S3 Bucket**
+The data file can be check through the public **AWS S3 Bucket**  at https://tdf-tht.s3.ap-southeast-2.amazonaws.com/Staging/weatherDataHourly.csv
 ### Infrastructure Diagram
 <img src="https://github.com/Zoe-X-X/TDF_tht/blob/main/Infrastructure.png" width="400" >
 
