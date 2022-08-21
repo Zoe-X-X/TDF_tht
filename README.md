@@ -17,7 +17,6 @@ The `.py` script files in `iaC` can automatically instantiate infrastructure sho
 * `tdfThtDeploymentPackage.zip` contains the `request` package to interact with the API and the core function runs by **AWS Lambda**, which implements obtaining the weather data from the API and then updating the data file stored in **AWS S3**.
 * `Pandas_layer.zip` is used to install `Pandas`packages to enable **AWS Lambda** to run python script files.
 
-The data file can be check through the public **AWS S3 Bucket**  at https://s3.console.aws.amazon.com/s3/buckets/tdf-tht?region=ap-southeast-2&tab=objects (public access available)
 ### Infrastructure Diagram
 <img src="https://github.com/Zoe-X-X/TDF_tht/blob/main/Infrastructure.png" width="400" >
 
